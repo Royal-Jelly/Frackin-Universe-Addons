@@ -1,0 +1,10 @@
+{
+  "name" : "Shipstructor_FU",
+  "version" : "Beta v. Glad Giraffe",
+  "path" : ".",
+  "dependencies" : ["FrackinUniverse", "Shipstructor"],
+  "modauthor" : "TheSidofEvil, Thakyz, HuggableCreep, and Madtulip for the orriginal concept",
+  "modversion" : "Alpha 0.0.7",
+  "moddescription" : "The Spiritual Successor to Madtulips Spaceship Mod, by concept they are similar but things have changed since Enraged Koala",
+  "modsupporturl" : "http://community.playstarbound.com/resources/madtulip-s-spaceship-mod.59/"
+}
