@@ -2,8 +2,9 @@
   "animatedParts" : {
     "stateTypes" : {
       "meter" : {
-        "default" : "0",
+        "default" : "d",
         "states" : {
+          "d" : {"frames" : 1},
           "0" : {"frames" : 1},
           "1" : {"frames" : 1},
           "2" : {"frames" : 1},
@@ -17,6 +18,14 @@
           "10" : {"frames" : 1}
         }
       },
+      "status" : {
+        "default" : "off",
+        "states" : {
+          "off" : {"frames" : 1},
+          "on" : {"frames" : 1},
+          "error" : {"frames" : 1}
+        }
+      },
 	  "base" : {
 	    "default" : "base",
 		"states" : { "base" : {"frames" : 1}}
@@ -25,9 +34,14 @@
 
     "parts" : {
       "meter" : {
-	    "properties" : {"centered" : false},
+	"properties" : {
+	"zLevel" : 3,
+	"centered" : false,
+	"fullbright" : true 
+	},
         "partStates" : {
           "meter" : {
+            "d" : {"properties" : {"image" : "<partImage>:meter.d"}},
             "0" : {"properties" : {"image" : "<partImage>:meter.0"}},
             "1" : {"properties" : {"image" : "<partImage>:meter.1"}},
             "2" : {"properties" : {"image" : "<partImage>:meter.2"}},
@@ -39,6 +53,20 @@
             "8" : {"properties" : {"image" : "<partImage>:meter.8"}},
             "9" : {"properties" : {"image" : "<partImage>:meter.9"}},
             "10" : {"properties" : {"image" : "<partImage>:meter.10"}}
+          }
+        }
+      },
+      "status" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : false,
+          "fullbright" : true
+        },
+        "partStates" : {
+          "status" : {
+            "off" : {"properties" : {"image" : "<partImage>:status.off"}},
+            "on" : {"properties" : {"image" : "<partImage>:status.on"}},
+            "error" : {"properties" : {"image" : "<partImage>:status.error"}}
           }
         }
       },
