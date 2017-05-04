@@ -1,0 +1,42 @@
+{
+  "objectName" : "isn_microbattery_t3_ceru",
+  "rarity" : "Common",
+  "colonyTags" : [ "science" ],
+  "category" : "wire",
+  "price" : 600,
+  "description" : "A micro power storage unit. Stores up to 1000u of power and dispenses 6u when connected.",
+  "shortdescription" : "^cyan;1000u 6v Micro Battery Unit^reset;",
+  "race" : "generic",
+  "printable" : false,
+
+  "inventoryIcon" : "isn_microbattery_t3_ceru_icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "isn_microbattery_t3_ceru_base.png",
+      "imagePosition" : [0, 0],
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "animation" : "isn_microbattery_t3_ceru.animation",
+  "animationParts" : {
+    "meter" : "isn_microbattery_t3_ceru_meter.png",
+    "status" : "isn_microbattery_t3_ceru_status.png",
+    "base" : "isn_microbattery_t3_ceru_base.png"
+  },
+  "animationPosition" : [0, 0],
+  
+  "scripts" : [ "/objects/power/isn_battery.lua",
+                "/objects/power/isn_sharedpowerscripts.lua",
+		"/objects/isn_sharedobjectscripts.lua"],
+  "scriptDelta" : 50,
+  
+  "outputNodes" : [ [1, 1] ],
+  "inputNodes" : [ [0, 0], [0, 1] ],
+  
+  "isn_powerSupplier" : true,
+  "isn_powerReciever" : true,
+  "isn_batteryCapacity" : 1000,
+  "isn_batteryVoltage" : 6
+}

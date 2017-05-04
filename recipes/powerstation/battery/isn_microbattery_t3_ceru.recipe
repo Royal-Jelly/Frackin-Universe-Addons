@@ -1,0 +1,13 @@
+{
+  "input" : [
+    { "item" : "vialproto", "count" : 1 },
+    { "item" : "thoriumrod", "count" : 1 },
+    { "item" : "battery", "count" : 1 },
+    { "item" : "fuprocessor", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "isn_microbattery_t3_ceru",
+    "count" : 1
+  },
+  "groups" : [ "powerstation2", "battery", "all" ]
+}
