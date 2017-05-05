@@ -39,15 +39,14 @@
   "inputNodes" : [ [-1, 0] ],
 
   "scripts" : [ 
-    "/objects/storage/storagedrive.lua",
-    "/scripts/v6/improvedcontainerrotting.lua",
-    "/scripts/v6/improvedcontainer.lua"
+    "/objects/storage/storagedriveapi.lua",
+    "/objects/storage/storagedrive.lua"
   ],
   "containerCallback" : "binInventoryChange",
   
   "openSounds" : [ "/sfx/objects/woodenbox_open.ogg" ],
   "closeSounds" : [ "/sfx/objects/woodenbox_close.ogg" ],
-  "slotCount" : 100,
+  "slotCount" : 128,
   "uiConfig" : "/interface/chests/storagedrive100k.config",
   "frameCooldown" : 67,
   "autoCloseCooldown" : 3600
