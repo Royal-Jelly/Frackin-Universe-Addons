@@ -6,6 +6,6 @@
  	        { "item" : "aichip", "count" : 1 }
 
 	],
-	"output" : { "item" : "tmn_storagedrive_100k", "count" : 1 },
+	"output" : { "item" : "tmn_storagedrive_64k", "count" : 1 },
         "groups" : [ "powerstation1", "network", "all" ]
 }

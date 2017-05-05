@@ -1,12 +1,12 @@
 {
-  "objectName" : "tmn_storagedrive_100k",
+  "objectName" : "tmn_storagedrive_64k",
   "printable" : false,
   "rarity" : "Common",
   "objectType" : "container",
   "category" : "storage",
   "price" : 5000,
-  "description" : "The Storage cells on this Transmatter Device can hold 100k items.",
-  "shortdescription" : "Transmatter Cube",
+  "description" : "The Storage cells on this Transmatter Device can hold 64k items.",
+  "shortdescription" : "Transmatter Storage Cube : 64k",
   "race" : "generic",
 
   "apexDescription" : "A cube that digitally store item from the Transmatter Networks.",
@@ -16,10 +16,10 @@
   "humanDescription" : "A cube that digitally store item from the Transmatter Networks.",
   "hylotlDescription" : "A cube that digitally store item from the Transmatter Networks.",
 
-  "inventoryIcon" : "storagedrive100k_icon.png",
+  "inventoryIcon" : "storagedrive64k_icon.png",
   "orientations" : [
     {
-      "dualImage" : "storagedrive100k.png:<color>.0",
+      "dualImage" : "storagedrive64k.png:<color>.0",
 
       "imagePosition" : [-16, 0],
       "spaceScan" : 0.1,
@@ -31,7 +31,7 @@
   "animation" : "/objects/storage/storagedrive.animation",
 
   "animationParts" : {
-    "bin" : "storagedrive100k.png"
+    "bin" : "storagedrive64k.png"
   },
   "animationPosition" : [-16, 0],
   
@@ -46,8 +46,8 @@
   
   "openSounds" : [ "/sfx/objects/woodenbox_open.ogg" ],
   "closeSounds" : [ "/sfx/objects/woodenbox_close.ogg" ],
-  "slotCount" : 128,
-  "uiConfig" : "/interface/chests/storagedrive100k.config",
+  "slotCount" : 64,
+  "uiConfig" : "/interface/chests/storagedrive.config",
   "frameCooldown" : 67,
   "autoCloseCooldown" : 3600
 }
