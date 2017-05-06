@@ -1,12 +1,12 @@
 {
-  "objectName" : "tmn_storagedrive_64k",
+  "objectName" : "tmn_storagedrive_1024k",
   "printable" : false,
   "rarity" : "Common",
   "objectType" : "container",
   "category" : "storage",
   "price" : 5000,
-  "description" : "The Storage cells on this Transmatter Device can hold 64k items.",
-  "shortdescription" : "Transmatter Tesseract : 64k",
+  "description" : "The Storage cells on this Transmatter Device can hold 1024k items.",
+  "shortdescription" : "Transmatter Tesseract : 1024k",
   "race" : "generic",
 
   "apexDescription" : "Hyperstorage Devices are outlawed by the miniknog.",
@@ -17,10 +17,10 @@
   "hylotlDescription" : "Digitized what a horror, especially for living matter.",
   "novakidDescription" : "This is trickery, what be inside the mystery box?"
 
-  "inventoryIcon" : "storagedrive64k_icon.png",
+  "inventoryIcon" : "storagedrive1024k_icon.png",
   "orientations" : [
     {
-      "dualImage" : "storagedrive64k.png:<color>.0",
+      "dualImage" : "storagedrive1024k.png:<color>.0",
 
       "imagePosition" : [-16, 0],
       "spaceScan" : 0.1,
@@ -32,7 +32,7 @@
   "animation" : "/objects/storage/storagedrive.animation",
 
   "animationParts" : {
-    "bin" : "storagedrive64k.png"
+    "bin" : "storagedrive1024k.png"
   },
   "animationPosition" : [-16, 0],
   
@@ -47,7 +47,7 @@
   
   "openSounds" : [],
   "closeSounds" : [],
-  "slotCount" : 64,
+  "slotCount" : 1024,
   "uiConfig" : "/interface/chests/storagedrive.config",
   "frameCooldown" : 67,
   "autoCloseCooldown" : 3600
