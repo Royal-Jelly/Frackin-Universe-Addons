@@ -1,0 +1,10 @@
+{
+  "itemName" : "unstablephasematter",
+  "price" : 500,
+  "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "unstablephasematter.png",
+  "description" : "A substance that breaches into the 3rd dimension. Can be used for crafting.",
+  "shortdescription" : "Unstable Phase Matter",
+  "itemTags" : [ "reagent" ]
+}
