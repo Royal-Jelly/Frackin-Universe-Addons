@@ -1,0 +1,56 @@
+{  
+  "objectName" : "assemblerwall",
+  "colonyTags" : ["storage","mechanical","crafting"],
+  "rarity" : "Rare",
+  "category" : "crafting",
+  "price" : 2000,
+  "printable" : false,
+  "objectType" : "container",
+  "description" : "With a sample and enough materials, it can produce nearly anything.",
+  "shortdescription" : "Wall-mounted Assembler",
+  "race" : "generic",
+  "health" : 1.5,
+
+  "apexDescription" : "Test",
+  "avianDescription" : "Test",
+  "floranDescription" : "It cooksss meatsssss!",
+  "glitchDescription" : "Caution. Mixing foods and Industrial materials in assembler is not allowed.",
+  "humanDescription" : "An automatic assembler! Can I make a car from it?",
+  "hylotlDescription" : "Test",
+  "novakidDescription" : "I was wondering, what happen if I scan myself in this assembler?",
+  
+  "state" : {
+    "kind" : "storage",
+    "openSounds" : [ "/sfx/objects/miningchest_open.ogg" ],
+    "closeSounds" : [ "/sfx/objects/miningchest_close.ogg" ],
+    "slotCount" : 13,
+    "uiconfig" : "/objects/crafting/assemblerwall/assemblerwall.config",
+	"containerCallback": "containerCallback"
+  },
+  
+  "inventoryIcon" : "assemblerwallicon.png",
+  "orientations" : [
+    {
+      "image" : "assemblerwall.png:<color>.0",
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+  
+  "scripts" : [ "assemblerwall.lua", "assembler_functions.lua"],
+  "scriptDelta" : 1,
+
+  "outputNodes" : [ [-1, 2] ],
+  "inputNodes" : [ [-1, 0] ],
+
+  "openSounds" : [ "/sfx/objects/miningchest_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/miningchest_close.ogg" ],
+  "slotCount" : 13,
+  "containerCallback": "containerCallback",
+  "uiConfig" : "/interface/windowconfig/assemblerwall.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 36000
+}
