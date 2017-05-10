@@ -20,7 +20,7 @@ function init()
 	outDataNode=0
 end
 
---don't knwo why we need this snippit because the whole script will only run on SB 1.2+
+--don't know why we need this snippit because the whole script will only run on SB 1.2+
 function configParameter(name, default)
   if entity.configParameter then
     return entity.configParameter(name,default)--Glad
