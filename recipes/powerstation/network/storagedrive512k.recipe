@@ -3,7 +3,7 @@
  	        { "item" : "advancealloy", "count" : 6 },
 		{ "item" : "laserdiode", "count" : 4 },
   	        { "item" : "electromagnet", "count" : 2 },
- 	        { "item" : "aichip", "count" : 1 }
+ 	        { "item" : "fuprocessor", "count" : 1 }
 
 	],
 	"output" : { "item" : "tmn_storagedrive_512k", "count" : 1 },
