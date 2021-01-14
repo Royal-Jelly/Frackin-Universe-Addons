@@ -1,3 +1,4 @@
+require '/scripts/fupower.lua'
 require "/scripts/kheAA/transferUtil.lua"
 
 ic = {}
@@ -14,10 +15,17 @@ function init()
 	message.setHandler("lock", ic.handlerLock)
 	message.setHandler("rename", ic.handlerRename)
 	message.setHandler("open", ic.handlerOpen)
+		if config.getParameter('powertype') then
+			power.init()
+			powered = true
+		else
+			powered = false
+		end
 	transferUtil.init()
 	storage.receiveItems=true
 	inDataNode=0
 	outDataNode=0
+	object.setInteractive(true)
 end
 
 --don't know why we need this snippit because the whole script will only run on SB 1.2+
@@ -46,7 +54,7 @@ function update(dt)
 		deltaTime=deltaTime+dt
 	end
 
-	-- Persistant Inventory Script Credits to 
+	-- Persistant Inventory Script Credits to
 	if icHookUpdate then
 		icHookUpdate(dt)
 	end
@@ -117,7 +125,7 @@ function fillPercent(container)
 end
 
 
--- More persistant storage code 
+-- More persistant storage code
 function die()
 	local newPrice = 0
 	local countItems = 0
@@ -144,7 +152,7 @@ function die()
 			local iconf = root.itemConfig( object.name() )
 			if iconf and iconf.config then
 				if iconf.config.inventoryIcon then
-					newObj.inventoryIcon = iconf.config.inventoryIcon.."?border=1;FF0000?fade=FF0000FF;0.1"
+					newObj.inventoryIcon = iconf.config.inventoryIcon.."?border=1;0f3c8f?fade=0f3c8fFF;0.1"
 				end
 				-- if iconf.config.itemAgeMultiplier then
 				-- 	newObj.itemAgeMultiplier = iconf.config.itemAgeMultiplier
@@ -156,7 +164,7 @@ function die()
 					newObj.price = newPrice
 				end
 			end
-			newObj.description = "^green;Slots used: ".. countSlots
+			newObj.description = "\n^green;storage used: ".. countSlots
 			if countItems > countSlots then
 				newObj.description = newObj.description .. "\nTotal items: ".. countItems
 			end
