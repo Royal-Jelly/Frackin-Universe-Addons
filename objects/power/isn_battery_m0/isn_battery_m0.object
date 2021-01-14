@@ -1,0 +1,44 @@
+{
+  "objectName" : "isn_battery_m0",
+  "rarity" : "Common",
+  "colonyTags" : [ "science" ],
+  "category" : "wire",
+  "price" : 60,
+	"description" : "A very primitive battery.\n^truncate; ^red;Scan for Info^reset;\nStorage Capacity: ^green;100^reset;J",
+  "shortdescription" : "^orange;Simple^reset; Battery",
+  "race" : "generic",
+  "printable" : false,
+
+  "inventoryIcon" : "isn_battery_m0_icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "isn_battery_m0_base.png",
+      "imagePosition" : [0, 0],
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "animation" : "isn_battery_m0.animation",
+  "animationParts" : {
+    "meter" : "isn_battery_m0_meter.png",
+    "status" : "isn_battery_m0_status.png",
+    "base" : "isn_battery_m0_base.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [
+    "/objects/power/isn_battery.lua",
+    "/objects/power/isn_sharedpowerscripts.lua",
+    "/objects/isn_sharedobjectscripts.lua"
+  ],
+  "scriptDelta" : 50,
+
+  "outputNodes" : [ [0, 0], [1, 0] ],
+	"inputNodes" : [ [0, 1], [1, 1] ],
+
+  "isn_powerSupplier" : true,
+  "isn_powerReciever" : true,
+  "isn_batteryCapacity" : 100,
+  "isn_batteryVoltage" : 2
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "op": "add",
+    "path": "/researchTree/fu_power/electronicsbasic/unlocks/-",
+    "value": "isn_battery_m0"
+  },
+  {
+    "op": "add",
+    "path": "/researchTree/fu_power/electronicsbasic/unlocks/-",
+    "value": "msd_drive_64"
+  }
+]
