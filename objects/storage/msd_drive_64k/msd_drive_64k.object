@@ -3,41 +3,26 @@
   "printable" : false,
   "rarity" : "Common",
   "objectType" : "container",
-  "category" : "storage",
+  "category" : "wire",
   "price" : 100,
-  "description" : "Is capable of storing a vast ammount of items digitally.\n^blue;Input^white;1^blue;: ^white;item network\n^red;Output^white;1^red;: ^white;item network",
+  "description" : "^truncate; ^red;Interact for Info^reset; \n^blue;Input 1^reset;: Power Switch\n^blue;Input^white;1^blue;: ^white;Item Network\n^red;Output^white;1^red;: ^white;item network \nStorage Capacity: ^green;350^reset;J",
   "shortdescription" : "Matter Storage Device",
   "race" : "generic",
-
-  "apexDescription" : "Hyperstorage Devices are outlawed by the miniknog.",
-  "avianDescription" : "I wonder where the items transcend to.",
-  "floranDescription" : "Floransss wonder what it isss like to be digitized.",
-  "glitchDescription" : "Comment. Transmatter storage is highly eficient.",
-  "humanDescription" : "A cube that digitally stores items, Neato ",
-  "hylotlDescription" : "Digitized what a horror, especially for living matter.",
-  "novakidDescription" : "This is trickery what be inside the mystery box?",
 
   "inventoryIcon" : "msd_drive_64k_icon.png",
   "orientations" : [
     {
-      "dualImage" : "msd_drive_64k.png:<color>.0",
+      "dualImage" : "msd_drive_64k_base.png",
 
-      "imagePosition" : [-16, 0],
+      "imagePosition" : [0, 0],
       "spaceScan" : 0.1,
       "anchors" : [ "bottom" ],
       "collision" : "platform"
     }
   ],
 
-  "animation" : "/objects/storage/storagedrive.animation",
-
-  "animationParts" : {
-    "bin" : "msd_drive_64k.png"
-  },
-  "animationPosition" : [-16, 0],
-
   "interactData" : {
-    "uiConfig" : "/interface/chests/storagedrive.config",
+    "uiConfig" : "/interface/chests/msd_drive.config",
     "paneLayoutOverride" : {
       "windowtitle" : {
         "title" : "Matter Storage Device",
@@ -46,23 +31,35 @@
     }
   },
 
-  "outputNodes" : [ [-1, 1] ],
-  "inputNodes" : [ [-1, 0], [0, 0] ],
+  "breakDropOptions" : [],
+
+	"animation" : "/objects/storage/msd_drive.animation",
+	"animationParts" : {
+		"meter" : "msd_drive_64k_meter.png",
+    "storage" : "msd_drive_64k_storage.png",
+		"status" : "msd_drive_64k_status.png",
+		"base" : "msd_drive_64k_base.png"
+	},
+	"animationPosition" : [0, 0],
 
   "scripts" : [
-    "/objects/storage/storagedriveapi.lua",
-    "/objects/storage/storagedrive.lua"
+    "/scripts/fupower.lua",
+    "/objects/power/isn_battery.lua"
   ],
-  "containerCallback" : "binInventoryChange",
+  "scriptDelta" : 60,
 
-  "powertype" : "input",
-	"isn_requiredPower" : 0,
-	"isn_liquidCollector" : false,
+	"outputNodes" : [ [1, 1] ],
+	"inputNodes" : [ [0, 0], [1, 0], [2, 0] ],
+
+	"isn_batteryCapacity" : 350,
+	"isn_batteryVoltage" : 2,
+	"powertype" : "battery",
+
 
   "openSounds" : [ "/sfx/objects/miningchest_open.ogg" ],
   "closeSounds" : [ "/sfx/objects/miningchest_close.ogg" ],
   "slotCount" : 64,
-  "uiConfig" : "/interface/chests/storagedrive.config",
+  "uiConfig" : "/interface/chests/msd_drive.config",
   "frameCooldown" : 67,
   "autoCloseCooldown" : 3600
 }
