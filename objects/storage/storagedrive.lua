@@ -1,12 +1,14 @@
-require '/scripts/fupower.lua'
+require "/scripts/util.lua"
 require "/scripts/kheAA/transferUtil.lua"
 
 ic = {}
 ic.serverVersion = 1
 
-local deltaTime=1
+local scanTimer
 
 function init()
+	transferUtil.init()
+  object.setInteractive(true)
 	ic.objectName = config.getParameter("shortdescription") or object.name()
 	ic.locked = 0
 	ic.eid = entity.id()
@@ -15,17 +17,9 @@ function init()
 	message.setHandler("lock", ic.handlerLock)
 	message.setHandler("rename", ic.handlerRename)
 	message.setHandler("open", ic.handlerOpen)
-		if config.getParameter('powertype') then
-			power.init()
-			powered = true
-		else
-			powered = false
-		end
-	transferUtil.init()
 	storage.receiveItems=true
 	inDataNode=0
 	outDataNode=0
-	object.setInteractive(true)
 end
 
 --don't know why we need this snippit because the whole script will only run on SB 1.2+
@@ -46,12 +40,13 @@ function setAnimationState(name, default)
 end
 
 function update(dt)
-	if deltaTime > 1 then
-		deltaTime=0
-		transferUtil.loadSelfContainer() -- my Goodness how does one forget something so simple
+	-- Notify ITD but no faster than once per second.
+	if not scanTimer or (scanTimer > 1) then
+		transferUtil.loadSelfContainer()
 		binInventoryChange()  --borrowed from gardenbot
+		scanTimer = 0
 	else
-		deltaTime=deltaTime+dt
+		scanTimer=scanTimer+dt
 	end
 
 	-- Persistant Inventory Script Credits to

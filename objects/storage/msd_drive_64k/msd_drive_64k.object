@@ -50,13 +50,15 @@
   "inputNodes" : [ [-1, 0], [0, 0] ],
 
   "scripts" : [
+    "/scripts/fupower.lua",
     "/objects/storage/storagedriveapi.lua",
     "/objects/storage/storagedrive.lua"
   ],
+  "scriptDelta" : 300,
   "containerCallback" : "binInventoryChange",
 
   "powertype" : "input",
-	"isn_requiredPower" : 0,
+	"isn_requiredPower" : 2,
 	"isn_liquidCollector" : false,
 
   "openSounds" : [ "/sfx/objects/miningchest_open.ogg" ],

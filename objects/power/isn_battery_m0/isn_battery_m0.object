@@ -5,7 +5,7 @@
   "category" : "wire",
   "price" : 60,
 	"description" : "A very primitive battery.\n^truncate; ^red;Scan for Info^reset;\nStorage Capacity: ^green;100^reset;J",
-  "shortdescription" : "^orange;Simple^reset; Battery",
+  "shortdescription" : "^orange;Simple^reset;  Battery",
   "race" : "generic",
   "printable" : false,
 
@@ -18,6 +18,7 @@
       "anchors" : [ "background" ]
     }
   ],
+  "breakDropOptions" : [],
 
   "animation" : "isn_battery_m0.animation",
   "animationParts" : {
@@ -28,9 +29,8 @@
   "animationPosition" : [0, 0],
 
   "scripts" : [
-    "/objects/power/isn_battery.lua",
-    "/objects/power/isn_sharedpowerscripts.lua",
-    "/objects/isn_sharedobjectscripts.lua"
+    "/scripts/fupower.lua",
+    "/objects/power/isn_battery.lua"
   ],
   "scriptDelta" : 50,
 
